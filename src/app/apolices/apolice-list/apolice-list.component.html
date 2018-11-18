@@ -1,0 +1,154 @@
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header pointerCursor" id="headingOne" (click)="isHidden = !isHidden">
+        <button class="btn btn-link" type="button" (click)="isHidden = !isHidden">
+          {{ apolice.numero_documento }}
+        </button>
+    </div>
+
+    <div class="card-body" [hidden]="isHidden">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h2>Visao 360</h2>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="numero_documento">Numero Documento:</label>
+              <input type="text" class="form-control" id="numero_documento" placeholder="numero_documento" [value]="apolice.numero_documento"
+                readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="tipo_documento">Tipo Documento:</label>
+              <input type="email" class="form-control" id="tipo_documento" placeholder="tipo_documento" [value]="apolice.tipo_documento"
+                readonly>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="nome_segurado">Nome Segurado:</label>
+              <input type="text" class="form-control" id="nome_segurado" placeholder="nome_segurado" [value]="apolice.nome_segurado"
+                readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="nome_produto">Nome Produto:</label>
+              <input type="text" class="form-control" id="nome_produto" placeholder="nome_produto" [value]="apolice.nome_produto"
+                readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="inicio_vigencia">Inicio Vigencia:</label>
+              <input type="text" class="form-control" id="inicio_vigencia" [value]="apolice.inicio_vigencia" readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="fim_vigencia">Fim Vigencia:</label>
+              <input type="text" class="form-control" id="fim_vigencia" [value]="apolice.fim_vigencia" readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="nome_familia">Nome Familia:</label>
+              <input type="text" class="form-control" id="nome_familia" placeholder="nome_familia" [value]="apolice.nome_familia"
+                readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="documento_vigente">Documento Vigente:</label>
+              <input type="text" class="form-control" id="documento_vigente" placeholder="documento_vigente" [value]="apolice.documento_vigente"
+                readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="nome_corretora">Nome Corretora:</label>
+              <input type="text" class="form-control" id="nome_corretora" placeholder="nome_corretora" [value]="apolice.nome_corretora"
+                readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="cnpj_corretora">CNPJ Corretora:</label>
+              <input type="text" class="form-control" id="cnpj_corretora" placeholder="cnpj_corretora" [value]="apolice.cnpj_corretora"
+                readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="nome_seguradora">Nome Seguradora:</label>
+              <input type="text" class="form-control" id="nome_seguradora" placeholder="nome_seguradora" [value]="apolice.nome_seguradora"
+                readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="cnpj_seguradora">CNPJ Seguradora:</label>
+              <input type="text" class="form-control" id="cnpj_seguradora" placeholder="cnpj_seguradora" [value]="apolice.cnpj_seguradora"
+                readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="numero_processo_susep">Numero processo SUSEP:</label>
+              <input type="text" class="form-control" id="numero_processo_susep" placeholder="numero_processo_susep"
+                [value]="apolice.numero_processo_susep" readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="pagamento_em_atraso">Pagamento em atraso:</label>
+              <input type="text" class="form-control" id="pagamento_em_atraso" placeholder="pagamento_em_atraso"
+                [value]="apolice.pagamento_em_atraso" readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="valor_parcela">Valor Parcela:</label>
+              <input type="text" class="form-control" id="valor_parcela" placeholder="valor_parcela" [value]="apolice.valor_parcela"
+                readonly>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="importancia_segurada">Importancia Segurada:</label>
+              <input type="text" class="form-control" id="importancia_segurada" placeholder="importancia_segurada"
+                [value]="apolice.importancia_segurada" readonly>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
