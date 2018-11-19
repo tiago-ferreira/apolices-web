@@ -1,3 +1,48 @@
-<h1>Hello Apolices</h1>
+<nav class="navbar navbar-default bg-success ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand text-white" href="#">Apolices</a>
+    </div>
+  </div>
+</nav>
 
-<app-apolice-list *ngFor="let apolice of apolices" [apoliceInput]="apolice"></app-apolice-list>
+<div class="container mt-2">
+
+  <div class="row border border-success rounded">
+
+    <form class="needs-validation">
+
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="cpf">CPF:</label>
+          <input type="text" class="form-control" id="cpf" placeholder="CPF..." [value]="params.cpf" required>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="documento_vigente">Documento Vigente:</label>
+          <input type="text" class="form-control" id="documento_vigente" placeholder="Documento Vigente..." [value]="params.documento_vigente">
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="companhia">Companhia:</label>
+          <input type="text" class="form-control" id="companhia" placeholder="Companhia..." [value]="params.companhia">
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="form-group">
+          <button type="submit" (click)="find()">Pesquisar</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+<div class="container" *ngIf="apolices?.length == 0">
+  <app-apolice-list *ngFor="let apolice of apolices" [apoliceInput]="apolice"></app-apolice-list>
+</div>

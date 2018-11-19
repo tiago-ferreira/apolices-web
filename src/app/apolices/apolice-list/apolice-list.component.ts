@@ -10,11 +10,12 @@ import { Apolice } from '../apolice-form/apolice';
 export class ApoliceListComponent  implements OnInit {
 
   apolice: Apolice;
-  isHidden: true;
+  isHidden;
 
   @Input()  apoliceInput;
-
+  
   ngOnInit(): void {
+      this.isHidden = true;
       this.apolice = this.apoliceInput;
   }
 }

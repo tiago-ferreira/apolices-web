@@ -1,6 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Apolice } from './apolice';
+import * as _ from 'lodash';
+import { SearchParams } from './searchParams';
 
 
 
@@ -15,5 +17,17 @@ export class ApoliceService {
     listApolices() {
         return this.httpClient
                 .get<Apolice[]>(API+'/apolices');
+    }
+
+    findApolices(parameters: SearchParams) {
+        let params = new HttpParams();
+
+        // Begin assigning parameters
+        if (!_.isUndefined(parameters)) {
+            params = _.isUndefined(parameters.cpf) ? params : params.append('cpf', parameters.cpf);
+            params = _.isUndefined(parameters.documento_vigente) ? params : params.append('documento_vigente', parameters.documento_vigente);
+            params = _.isUndefined(parameters.companhia) ? params : params.append('companhia', parameters.companhia);
+        }
+        return this.httpClient.get<Apolice[]>(API+'/apolices', { params: params });
     }
 }

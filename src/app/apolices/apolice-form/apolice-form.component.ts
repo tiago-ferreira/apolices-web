@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ApoliceService } from './apolice.service';
 import { Apolice } from './apolice';
+import { SearchParams } from './searchParams';
 
 @Component({
   selector: 'app-apolice-form',
@@ -9,16 +10,20 @@ import { Apolice } from './apolice';
 })
 export class ApoliceFormComponent implements OnInit {
 
-  apolices: Apolice[] = []
+  apolices: Apolice[] = [];
+
+  @Input() params: SearchParams;
   
   constructor(private apoliceService: ApoliceService){} 
 
   ngOnInit(): void {
 
-
-    this.apoliceService
-      .listApolices()
-      .subscribe(apolices => this.apolices = apolices);
   }
+
+  find(): void {
+    this.apoliceService.findApolices(this.params).subscribe(apolices => this.apolices = apolices);
+  }
+
+
 
 }

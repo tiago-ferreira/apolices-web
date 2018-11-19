@@ -1,20 +1,12 @@
-<div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header pointerCursor" id="headingOne" (click)="isHidden = !isHidden">
-        <button class="btn btn-link" type="button" (click)="isHidden = !isHidden">
-          {{ apolice.numero_documento }}
-        </button>
+<div class="container panel panel-primary " id="accordionExample">
+
+    <div class="panel-heading col-sm-6 alert alert-success pointerCursor" id="headingOne" (click)="isHidden = !isHidden">
+        <h3 class="panel-title">{{ apolice.nome_produto }}</h3>
     </div>
 
-    <div class="card-body" [hidden]="isHidden">
+    <div class="panel-body" [hidden]="isHidden">
 
       <div class="container">
-
-        <div class="row">
-          <div class="col-sm-6">
-            <h2>Visao 360</h2>
-          </div>
-        </div>
 
         <div class="row">
 
@@ -33,8 +25,6 @@
                 readonly>
             </div>
           </div>
-
-
 
           <div class="col-sm-6">
             <div class="form-group">
@@ -146,9 +136,11 @@
             </div>
           </div>
         </div>
-      </div>
+        <!-- Fim do row-->
 
+      </div>
+      <!-- Fim do container-->
 
     </div>
-  </div>
+    <!-- Fim do body-->
 </div>
