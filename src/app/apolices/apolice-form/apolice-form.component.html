@@ -10,26 +10,26 @@
 
   <div class="row border border-success rounded">
 
-    <form class="needs-validation">
+    <form [formGroup]="apoliceForm" class="needs-validation" novalidate>
 
       <div class="col-sm-12">
         <div class="form-group">
           <label for="cpf">CPF:</label>
-          <input type="text" class="form-control" id="cpf" placeholder="CPF..." [value]="params.cpf" required>
+          <input type="text" class="form-control" name="cpf" formControlName="cpf" placeholder="CPF..." >
         </div>
       </div>
 
       <div class="col-sm-12">
         <div class="form-group">
           <label for="documento_vigente">Documento Vigente:</label>
-          <input type="text" class="form-control" id="documento_vigente" placeholder="Documento Vigente..." [value]="params.documento_vigente">
+          <input type="text" class="form-control"  name="documento_vigente" formControlName="documento_vigente" placeholder="Documento Vigente..." >
         </div>
       </div>
 
       <div class="col-sm-12">
         <div class="form-group">
           <label for="companhia">Companhia:</label>
-          <input type="text" class="form-control" id="companhia" placeholder="Companhia..." [value]="params.companhia">
+          <input type="text" class="form-control" name="companhia" formControlName="companhia" placeholder="Companhia..." >
         </div>
       </div>
 
@@ -43,6 +43,5 @@
 
   </div>
 </div>
-<div class="container" *ngIf="apolices?.length == 0">
-  <app-apolice-list *ngFor="let apolice of apolices" [apoliceInput]="apolice"></app-apolice-list>
-</div>
+
+  <app-apolice-list [hidden]="showApolices" *ngFor="let apolice of apolices" [apoliceInput]="apolice"></app-apolice-list>
